@@ -1,0 +1,165 @@
+
+
+
+/*===================RESET CSSS ==================*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    font-family: 'Outfit', sans-serif;
+}
+
+h1:hover{
+    color: var(--Cyan); 
+    cursor: pointer;    
+}
+
+body{
+    font-size: 18px;
+    background-color:var(--Very-dark-blue-1) ;
+}
+
+
+:root{
+    
+/*### Primary*/
+
+--Soft-blue: hsl(215, 51%, 70%);
+--Cyan: hsl(178, 100%, 50%);
+
+/*### Neutral*/
+
+--Very-dark-blue-1: hsl(217, 54%, 11%);/*(main BG)*/
+--Very-dark-blue-2: hsl(216, 50%, 16%);/*(card BG)*/
+--Very-dark-blue-3: hsl(215, 32%, 27%);/*(line)*/
+-White: hsl(0, 0%, 100%);
+
+}
+
+/*===================CONTAINER-CARD ==================*/
+#container{
+   display: flex;
+   flex-direction: column;
+   flex-wrap: nowrap;
+
+}
+
+.card{
+    width: 354px ;
+    height:586px ;
+    background-color:var(--Very-dark-blue-2) ;
+    border-radius: 15px;
+    margin: 10px auto;
+}
+
+.card .active{
+    position: relative
+    ;
+    top: 25px;
+    left: 25px;
+
+}
+
+.card .active div {
+  position: absolute;
+  background-color: var(--Cyan);
+  width: 300px;
+  height: 300px;
+  top: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 15px;
+}
+.im-2{
+border-radius: 15px;
+}
+
+.card .active div:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.card .active div img{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+/*===================CARD INFO====================*/
+
+.info{
+    margin: 30px;
+    text-align: left;
+}
+p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: var(--Soft-blue);
+    line-height: -10px;
+}
+
+h1{
+    color:white ;
+    margin-top: 30px ;
+}
+
+
+.info-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.s1{
+   margin-left: 15px;
+   color: var(--Soft-blue);
+}
+
+.ic{
+    color: white;
+ }
+
+.blue{
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+
+/*===================LINE====================*/
+
+
+.line {
+    border: 1px solid  hsl(215, 51%, 70%);
+    filter: opacity(25%);
+    width: 305px;
+    margin-left: 25px;
+    margin-top: 15px;
+
+}
+
+
+/*===================CARD-SOCIAL STATUS ====================*/
+
+.social-status .status {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    margin: 15px;
+}
+
+.avatar{
+   border: 1px solid white;
+   border-radius: 50%;
+}
+
+
+@media (min-width: 500px) {
+    #container{
+       width: 400px;
+       margin: 0 auto;
+     }
+ }
